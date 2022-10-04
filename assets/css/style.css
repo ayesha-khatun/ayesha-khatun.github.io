@@ -8559,7 +8559,8 @@ button {
     width: 100%;
     /*my changed for products
     background: #161C2D; */
-    background: linear-gradient(45deg, rgba(107, 52, 250, 0.87059) 0%, rgba(212, 21, 110, 0.90196) 100%);
+ 
+    background: linear-gradient(45deg, rgb(236 157 145 / 95%) 0%, rgb(248 94 41 / 80%) 100%);
     top: 0;
     left: 0;
     opacity: 1;
