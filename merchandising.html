@@ -50,7 +50,7 @@
                     <form>
                         <h6 class=" pb-4">Query For : Merchandising</h6>
                         <div class="input-group">
-                            <input type="text" class="form-control" id="fullName" placeholder="Name"
+                            <input type="text" class="form-control" id="name" placeholder="Name"
                                 name="name" required style="height: 50px;">
                             <label for="fullName">Name</label>
                         </div>
@@ -60,7 +60,7 @@
                             <label for="phoneNumber">Email</label>
                         </div>
                         <div class="input-group">
-                            <input type="text" class="form-control" id="phoneNumber" placeholder="Phone"
+                            <input type="text" class="form-control" id="phone" placeholder="Phone"
                                 name="phone" required style="height: 50px;">
                             <label for="phoneNumber">Phone</label>
                         </div>
@@ -71,7 +71,7 @@
                         </div>
                         
                         <div class="input-group get-started-wrapper pb-3" style="justify-content: center">
-                            <a href="merchandising.html" class="filled-btn bg-burning-orange">
+                            <a href="merchandising.html" class="filled-btn bg-burning-orange" onclick="modalSubmit()">
                                 Submit <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -410,6 +410,36 @@
     <script src="assets/js/jquery.waypoints.js"></script>
     <!--====== Main Script ======-->
     <script src="assets/js/main.js"></script>
+    <script>
+
+        function modalSubmit(){
+            var id_url = "http://127.0.0.1:8000/products/create/";
+       
+            $.ajax({
+                url: id_url,
+                type: 'POST',
+                dataType: 'json',
+                async: false,
+                data: { 
+                        name: $("#name").val(),
+                        email: $("#email").val(),
+                        phone:  $("#phone").val(),
+                        message:  $("#message").val(),
+                    },
+                success: function (data) {
+                   
+                },
+                error: function (data) {
+                   
+                }
+            });
+
+
+
+
+        }
+        
+    </script>
 </body>
 
 </html>
