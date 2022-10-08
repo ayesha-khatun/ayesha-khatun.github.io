@@ -71,7 +71,8 @@
                         </div>
                         
                         <div class="input-group get-started-wrapper pb-3" style="justify-content: center">
-                            <a href="merchandising.html" class="filled-btn bg-burning-orange" onclick="modalSubmit()">
+                            <!-- onclick="modalSubmit()" -->
+                            <a href="merchandising.html" class="filled-btn bg-burning-orange">
                                 Submit <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -412,32 +413,32 @@
     <script src="assets/js/main.js"></script>
     <script>
 
-        function modalSubmit(){
-            var id_url = "http://127.0.0.1:8000/products/create/";
+        // function modalSubmit(){
+        //     var id_url = "http://127.0.0.1:8000/products/create/";
        
-            $.ajax({
-                url: id_url,
-                type: 'POST',
-                dataType: 'json',
-                async: false,
-                data: { 
-                        name: $("#name").val(),
-                        email: $("#email").val(),
-                        phone:  $("#phone").val(),
-                        message:  $("#message").val(),
-                    },
-                success: function (data) {
+        //     $.ajax({
+        //         url: id_url,
+        //         type: 'POST',
+        //         dataType: 'json',
+        //         async: false,
+        //         data: { 
+        //                 name: $("#name").val(),
+        //                 email: $("#email").val(),
+        //                 phone:  $("#phone").val(),
+        //                 message:  $("#message").val(),
+        //             },
+        //         success: function (data) {
                    
-                },
-                error: function (data) {
+        //         },
+        //         error: function (data) {
                    
-                }
-            });
+        //         }
+        //     });
 
 
 
 
-        }
+        // }
         
     </script>
 </body>
